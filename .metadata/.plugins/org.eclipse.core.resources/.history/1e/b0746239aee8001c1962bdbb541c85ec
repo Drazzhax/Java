@@ -1,0 +1,129 @@
+package javaFundamentals;
+
+public class TEST {
+	
+	public static void main(String[] args) {
+		
+		//Se definen unas cadenas que se van a usar para comparar
+		
+		String cadena1 = "Paprika";
+		String cadena2 = "paprika";	
+		int resultado=0;
+		
+		
+		//Equals y operador ternario y discriminación MAYUS-MINUS
+		
+		System.out.println("Las cadenas son:\n\nCadena 1: " + cadena1 + "\nCadena 2: " + cadena2 + "\nSon similares, pero no iguales\nAhora veamos "
+				+ "qué dice el autentificador:\n");
+		
+		System.out.println(cadena2.equals(cadena1) ? "Son cadenas idénticas al: " + 100 + "%" : "Se parecen como una lubina a una castaña, entre" + 
+				0 + "y nada, para parecerse la segunda cadena trendía que ser así: " + cadena2.toUpperCase() + "... vamos, claramente.." + "\n..." + "\n......" 
+				+ "\n........." + "\n\nUy... Parece que hemos patinado, un problemilla sin importancia" + "\nBueno, solo un poco... no hay que tomárselo muy a pecho... Vamos, digo yo" 
+				+ "\n\nLa respuesta realmente sería: " + cadena2.substring(0,1).toUpperCase() + cadena2.substring(1));
+		
+		System.out.println(cadena2.equalsIgnoreCase(cadena1) ? "\nEn este caso, son identicas... Aunque tambien podemos hacer algo de trampa -IGNORANDO- las mayus" 
+				: "\nNi harto de grifa");		
+		
+	
+		System.out.println("");
+		
+				
+		//Pruebas añadiendo argumentos a un bucle for
+		System.out.println("Vamos a otra cosa, es este caso, lo que vamos a hacer, es cascar el print... !Como parámetro de bucle!"
+				+ "\n¿No me digas que no es genial?" + "\nTal vez un poco guarro, pero lo superaremos... Creo\n");
+		for (int cont=0, i =0, x = 1, z=0; cont<10; cont++, System.out.println("Numero " + (cont) + "; " + z), z = i + x, i = 0, x += z ) {}
+		
+		System.out.println();
+		
+		//i, System.out.println("Resultado numero " + (cont+1) + "; " + i), i=x, x+=i)
+		
+		//Arrays
+		
+		//Declaración
+		String nombres[];
+		nombres = new String[3];
+		
+		//Declaración e inicialización
+
+		String cenutrios[] = new String[8];
+		@SuppressWarnings("unused")
+		String pescados[] = {"Rodaballo", "Lubina", "Atún", "Bacalao", cenutrios[0]};
+		
+		
+		
+		//Se aprovechan los argumentos de for, y se transforma una operación en un String
+		
+		for(int cont=0; cont<3; nombres[cont] = String.valueOf((cont+3)*2), cont++) {}
+		
+		System.out.println(nombres[0] + " " +  nombres[1] + " " + nombres[2]);
+		System.out.println("");
+
+		
+		
+		
+		//Obtener media
+		int calificaciones[] = {9, 8, 7, 10, 10, 9, 8, 8, 10, 9};
+		int media=0;
+		
+		//for (int i = 0; i < calificaciones.length; i++){
+			//media += calificaciones[i];		
+			//System.out.println(i);
+		//}
+		
+		for(int i : calificaciones) {
+			media += i;
+		}
+		
+		System.out.println("La media de calificaciones es: " + media/calificaciones.length + "\n");	
+		
+		//Arrays 2
+		
+		int matriz[][] = new int[4][4];
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int x = 0; x < matriz[i].length; x++) {
+				matriz[i][x] = i+x;
+				System.out.println("Posición: matriz[" + i + "][" + x + "] = " + matriz[i][x]);
+			}
+			System.out.println("");
+		}
+		
+		//Obetener información almacenada, sin saber la posición
+		for(int[] i : matriz) {
+			for(int x : i) {				
+				System.out.println("Posición: matriz[" + 0 + "][" + 0 + "] = " + x);
+			}
+		}
+		
+		//Arrays Dinámicos
+		int notas [][] = new int [5][];
+		
+		/*notas[0] = new int [2];
+		*notas[1] = new int [4];
+		*notas[2] = new int [7];
+		*notas[3] = new int [5];
+		*notas[4] = new int [3];
+		*/
+		for(int x = 0; x<notas.length; x++) {
+			notas[x] = new int [(int) (Math.random()*8+1)];
+		}
+		
+		for(int i = 0; i < notas.length; i++) {			
+			System.out.print("\nEl alumno número " + (i+1) + " ha sacado las siguientes notas : "); 
+			for (int x = 0; x < notas[i].length; x++) {
+				notas[i][x] = (int)(Math.random()*11);
+				System.out.print(notas[i][x] + " ");			
+			}
+		}
+		System.out.println("");
+		
+		for(int []notas1 : notas) {
+			int i = 1;
+			System.out.print("\nEl alumno número " + (i++) + " ha sacado las siguientes notas : "); 
+			for (int calificacion : notas1) {				
+				calificacion = (int)(Math.random()*11);
+				System.out.print(calificacion + " ");			
+			}
+		}
+	}	
+}

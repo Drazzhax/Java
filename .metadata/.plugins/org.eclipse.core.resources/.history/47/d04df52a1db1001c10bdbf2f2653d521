@@ -1,0 +1,45 @@
+//Esta clase comprueba que la letra introducida sea válida
+
+package game;
+
+import java.util.*;
+import java.lang.Character.*;
+
+public class Letter {
+	
+	private char c;
+	private boolean existe;
+	private boolean posicionCorrecta;
+
+	
+	public void letter(char c) {
+		this.c=c;
+		//Letra en mayus
+		c=Character.toUpperCase(c);
+		
+		existe = false;
+		posicionCorrecta = false;
+	}
+	
+	
+	public boolean existe() {
+		return existe;
+	}
+
+	public char getCaracter() {
+		return c;
+	}
+
+	public boolean posicionCorrecta() {
+		return posicionCorrecta;
+	}
+
+	public void setExiste(boolean existe) {
+		this.existe = existe;
+	}
+
+	public void setPosicionCorrecta(boolean posicionCorrecta) {
+		this.posicionCorrecta = posicionCorrecta;
+	}
+
+}
