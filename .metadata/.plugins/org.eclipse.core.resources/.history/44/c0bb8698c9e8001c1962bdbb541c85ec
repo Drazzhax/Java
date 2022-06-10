@@ -1,0 +1,72 @@
+package clasesObjetos;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Investiguemos el maravilloso mundo de las herencias
+		
+		System.out.println("INICIANDO");
+		System.out.println("Introduzca los datos de su gato");
+		
+
+		Scanner teclado = new Scanner(System.in);
+		
+		Gato gato1 = new Gato();
+		System.out.print("Introduzca el nombre del animaluco: ");
+		String nombre = teclado.nextLine();
+		
+        System.out.print("Introduzca la raza de " + nombre);
+        String raza = teclado.nextLine();                 
+        
+        System.out.print("Introduzca la edad de " + nombre);
+        int edad = teclado.nextInt();
+       
+		gato1.establecerAtributos(nombre, raza, edad);
+		
+		System.out.println("El nombre de este ser es: " + gato1.nombre);
+		System.out.println("La raza de " + gato1.nombre +" es: " + gato1.raza);
+		System.out.println("La antigüedad de este ser es de " + gato1.edad + " siglos... " + gato1.nombre + " empieza a estar viejo"
+				+ "\n¿O tal vez sea inmortal?\n");
+		
+			
+		
+		Gato gorflo = new Gato(); //Al Gorflo (objeto creado) se lo denomina instancia
+		Comedero plato1 = new Comedero();
+		
+		gorflo.establecerAtributos("Gandorflo", "Superior", 25);
+		
+		System.out.println("El nombre de este ser es: " + gorflo.nombre);
+		System.out.println("La raza de " + gorflo.nombre +" es: " + gorflo.raza);
+		System.out.println("La antigüedad de este ser es de " + gorflo.edad + " siglos... " + gorflo.nombre + " empieza a estar viejo"
+				+ "\n¿O tal vez sea inmortal?\n");
+
+		
+		plato1.rellenar();
+		
+		gorflo.comer(plato1.cantidad);
+		plato1.comer();
+		
+		gorflo.dormir();
+		gorflo.rondar();
+				
+	}
+	
+	public void menu() {
+		int eleccion = 0;
+		while (eleccion != 3){
+			
+			System.out.println("Selecciona qué hacer:" 
+					+ "\n1. Rellenar comida" 
+					+ "\n2. Dejar al gato comer" 
+					+ "\n3. Salir");
+			
+			Scanner teclado = new Scanner(System.in);
+			eleccion = teclado.nextInt();
+			switch eleccion {
+				case 1:
+			}		
+		}		
+	}
+
+}

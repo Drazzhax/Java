@@ -7,8 +7,7 @@ public class TEST {
 		//Se definen unas cadenas que se van a usar para comparar
 		
 		String cadena1 = "Paprika";
-		String cadena2 = "paprika";	
-		int resultado=0;
+		String cadena2 = "paprika";		
 		
 		
 		//Equals y operador ternario y discriminación MAYUS-MINUS
@@ -141,5 +140,9 @@ public class TEST {
 				System.out.print(calificacion + " ");			
 			}
 		}
+		
+		System.out.print("\nHora de continuar con lo siguiente:\n"); 
+		
+		
 	}	
 }

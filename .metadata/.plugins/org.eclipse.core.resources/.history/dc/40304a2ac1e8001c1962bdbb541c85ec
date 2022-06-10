@@ -1,0 +1,28 @@
+package clasesObjetos;
+
+public class Gato {
+	
+	String nombre;
+	String raza;
+	int edad;
+	
+	//Parámetros
+	
+	void establecerAtributos(String nombre, String raza, int edad) {
+		this.nombre=nombre;
+		this.raza=raza;
+		this.edad=edad;
+	}
+	
+	void comer() {
+		System.out.println(nombre +" no hace más que zampar!");
+	}
+	
+	void dormir() {
+		System.out.println(nombre +" está completamente roque");
+	}
+	void rondar() {
+		System.out.println(nombre +" ronda avisamente...\n¡Deja de morder el cable!");
+	}
+	
+}

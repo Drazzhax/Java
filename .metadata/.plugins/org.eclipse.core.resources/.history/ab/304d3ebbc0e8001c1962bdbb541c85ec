@@ -1,0 +1,29 @@
+package clasesObjetos;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Investiguemos el maravilloso mundo de las herencias
+		
+		Gato gorflo = new Gato(); //Al Gorflo (objeto creado) se lo denomina instancia
+		Comedero plato1 = new Comedero();
+		
+		gorflo.establecerAtributos("Gandorflo", "Superior", 25);
+		
+		System.out.println("El nombre de este ser es: " + gorflo.nombre);
+		System.out.println("La raza de " + gorflo.nombre +" es: " + gorflo.raza);
+		System.out.println("La antigüedad de este ser es de " + gorflo.edad + " siglos... " + gorflo.nombre + " empieza a estar viejo"
+				+ "\n¿O tal vez sea inmortal?\n");
+		
+		plato1.rellenar();
+		
+		gorflo.comer();
+		plato1.comer();
+		plato1.comer();plato1.comer();plato1.comer();plato1.comer();
+		
+		gorflo.dormir();
+		gorflo.rondar();
+		
+	}
+
+}

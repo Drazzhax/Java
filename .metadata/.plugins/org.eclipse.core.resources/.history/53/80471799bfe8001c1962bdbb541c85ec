@@ -1,0 +1,18 @@
+package clasesObjetos;
+
+public class Comedero {
+	
+	int cantidad;
+	
+	public void rellenar() {
+		cantidad=5;
+		System.out.println("Has rellenado el plato, hay " + cantidad + " raciones");
+	}
+	
+	public void comer() {
+		cantidad--;
+		System.out.println("Quedan " + cantidad + " raciones");
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package clasesObjetos;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Investiguemos el maravilloso mundo de las herencias
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package clasesObjetos;
+
+public class Comedero {
+	
+	int cantidad;
+	
+	public void rellenar() {
+		cantidad=3;
+		System.out.println("Has rellenado el plato, hay " + cantidad + " raciones");
+	}
+	
+	public int comer() {
+		if (cantidad>0) {
+			String mensaje;
+			cantidad--;
+			mensaje = cantidad > 1 ? System.out.println("Quedan " + cantidad + " raciones") : System.out.println("Queda " + cantidad + " racion");
+			
+		}
+		else {		
+			System.out.println("El comedero esta vacío así que no le queda otra que comer piedras"
+					+ "\n¡Rellénalo, gentuza!\n");
+		}
+		return cantidad;
+		
+	}
+
+}
