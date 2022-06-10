@@ -1,0 +1,18 @@
+package protoLogin;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User usurio1 = new User();
+		User usuario2 = new User("Mengano");
+		User usuario3 = new User("manolo", "pass");		
+		remember(usuario3.getPassword(), usuario3.getUsername());
+	}
+	
+	private static void remember(String pass, String user) {
+		System.out.println("Your user is: " + user);
+		System.out.println("Your password is: " + pass);
+	}
+
+}

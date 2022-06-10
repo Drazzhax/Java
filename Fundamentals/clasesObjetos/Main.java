@@ -1,92 +1,63 @@
 package clasesObjetos;
 import java.util.*;
 
-@SuppressWarnings("unused")
 public class Main {
 
-	public static void main(String[] args) {
-		// Investiguemos el maravilloso mundo de las herencias
-		
-		
-/*
- 		//Primeras palabras
- 
-		System.out.println("INICIANDO");
-		System.out.println("Introduzca los datos de su gato");		
-		
+   public static void main(String[] args) {
+      // Investiguemos el maravilloso mundo de las herencias
 
-		Scanner teclado = new Scanner(System.in);
-		
-		//Creación de objeto a medida
-		Gato gato1 = new Gato();
-		System.out.print("Introduzca el nombre del animaluco: ");
-		String nombre = teclado.nextLine();
-		
-        System.out.print("Introduzca la raza de " + nombre);
-        String raza = teclado.nextLine();                 
-        
-        System.out.print("Introduzca la edad de " + nombre);
-        int edad = teclado.nextInt();
-       
-		gato1.establecerAtributos(nombre, raza, edad);
-		
-		System.out.println("El nombre de este ser es: " + gato1.nombre);
-		System.out.println("La raza de " + gato1.nombre +" es: " + gato1.raza);
-		System.out.println("La antigüedad de este ser es de " + gato1.edad + " siglos... " + gato1.nombre + " empieza a estar viejo"
-				+ "\n¿O tal vez sea inmortal?\n");
-		
-*/			
-		
-		//Gato de prueba
-		
-		Gato gorflo = new Gato(); //Al Gorflo (objeto creado) se lo denomina instancia
-		Comedero plato1 = new Comedero();
-		
-		gorflo.establecerAtributos("Gandorflo", "Superior", 25);
-		
-		System.out.println("El nombre de este ser es: " + gorflo.nombre);
-		System.out.println("La raza de " + gorflo.nombre +" es: " + gorflo.raza);
-		System.out.println("La antigüedad de este ser es de " + gorflo.edad + " siglos... " + gorflo.nombre + " empieza a estar viejo"
-				+ "\n¿O tal vez sea inmortal?\n");
-		
-		
-		//Acciones de prueba
-		
-		plato1.rellenar();
-		
-		gorflo.comer(plato1.cantidad);
-		plato1.comer();
-		
-		gorflo.dormir();
-		gorflo.rondar();
-				
-	}
-	
-	
-/*	//Intento de menu
-	public void menu() {
-		
-		Scanner teclado = new Scanner(System.in);
-		Comedero plato1;
-		int eleccion = 0;
-		
-		while (eleccion != 3){
-			
-			System.out.println("Selecciona qué hacer:" 
-					+ "\n1. Rellenar comida" 
-					+ "\n2. Dejar al gato comer" 
-					+ "\n3. Salir");
-			
-			eleccion = teclado.nextInt();
-			switch (eleccion) {
-				case 1: 					
-					break;
-				case 2: 					
-					break;
-				case 3: 					
-					break;				
-			}		
-		}		
-	}
-*/
+      //Gato de prueba
+
+      Gato gorflo = new Gato(); //Al Gorflo (objeto creado) se lo denomina instancia
+      Comedero plato1 = new Comedero();
+
+      gorflo.establecerAtributos("Gandorflo", "Superior", 25);
+
+      saludo(gorflo.nombre, gorflo.raza, gorflo.edad);
+
+      //Acciones de prueba
+
+      plato1.rellenar();
+
+      while (plato1.cantidad >= 0) {
+         gorflo.comer(plato1.cantidad);
+         plato1.comer();
+      }
+
+      gorflo.dormir();
+      gorflo.rondar();
+
+   }
+
+   @SuppressWarnings("resource")
+   public static void invocarGato() {
+      //Primeras palabras
+      System.out.println("\nINICIANDO");
+      System.out.println("Introduzca los datos de su gato:\n");
+
+      Scanner teclado = new Scanner(System.in);
+
+      //Creación de objeto a medida
+      Gato gato1 = new Gato();
+      System.out.print("Cual es el nombre del animaluco?: ");
+      String nombre = teclado.nextLine();
+
+      System.out.print("Introduzca la raza de " + nombre + ": ");
+      String raza = teclado.nextLine();
+
+      System.out.print("Introduzca la edad de " + nombre + ": ");
+      int edad = teclado.nextInt();
+
+      gato1.establecerAtributos(nombre, raza, edad);
+
+      System.out.println();
+      saludo(gato1.nombre, gato1.raza, gato1.edad);
+   }
+
+   public static void saludo(String nombre, String raza, int edad) {
+      System.out.println("El nombre de este ser es: " + nombre);
+      System.out.println("La raza de " + nombre + " es: " + raza);
+      System.out.println("La antigüedad de este ser es de " + edad + " siglos... " + nombre + " empieza a estar viejo." +
+         "\n¿O tal vez sea inmortal?\n");
+   }
 }

@@ -1,0 +1,19 @@
+package protoLogin;
+
+public class User {
+	
+	String username;
+	String password;
+	
+	/* Modificadores de acceso:
+	 *
+	 * Default: Cualquier clase u objeto, en el mismo paquete, puede hacer uso 
+	 * Public: Aquí entra Hacienda, entra cualquiera aunque no esté en el mismo paquete
+	 * Private: Solo se puede acceder desde la misma clase
+	 * Protected:  
+	 */
+	
+	public void greetings() {
+		 System.out.println("Hey there " + this.username + "!");
+	}
+}

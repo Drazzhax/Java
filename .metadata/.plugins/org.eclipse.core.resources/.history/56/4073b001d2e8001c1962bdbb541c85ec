@@ -1,0 +1,11 @@
+package protoLogin;
+
+public class User {
+	
+	String username;
+	String password;
+	
+	void greetings() {
+		 System.out.println("Hey there " + this.username + "!");
+	}
+}

@@ -1,0 +1,14 @@
+package calculator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Calculadora calculadora = new Calculadora();
+		
+		int resultado = calculadora.suma(10, 20);
+		float resultadoF = calculadora.suma(10f, 20f);		
+		double resultadoD = calculadora.suma(10, 20);
+		
+	}
+
+}

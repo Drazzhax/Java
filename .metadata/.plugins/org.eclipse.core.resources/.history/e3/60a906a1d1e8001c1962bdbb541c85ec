@@ -1,0 +1,14 @@
+package protoLogin;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User Manolo = new User();
+		Manolo.password = "pass";
+		Manolo.username = "Manolo";
+		
+
+	}
+
+}

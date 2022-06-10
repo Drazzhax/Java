@@ -1,0 +1,25 @@
+package calculator;
+
+public class Calculadora {
+
+	
+	public int suma(int valor1, int valor2) {
+		return valor1+valor2;
+	}
+	
+	public float suma(int valor1, int valor2) {
+		return valor1+valor2;
+	}
+	
+	public int suma(int valor1, int valor2) {
+		return valor1+valor2;
+	}
+	
+	public int suma(int valor1, int valor2) {
+		return valor1+valor2;
+	}
+	
+	public int suma(int valor1, int valor2) {
+		return valor1+valor2;
+	}
+}

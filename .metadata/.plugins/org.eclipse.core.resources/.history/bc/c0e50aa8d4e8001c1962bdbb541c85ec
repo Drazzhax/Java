@@ -1,0 +1,11 @@
+package calculator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Calculadora calculadora = new Calculadora();
+		
+		int calculador = calculadora.suma(10, 20);
+	}
+
+}
